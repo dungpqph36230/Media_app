@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_app/components/drawer.dart';
 import 'package:firebase_app/components/text_field.dart';
 import 'package:firebase_app/components/wall_post.dart';
+import 'package:firebase_app/pages/profile_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -35,19 +37,30 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  void goToProfilePage() {
+    Navigator.pop(context);
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => const ProfilePage()));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
-        backgroundColor: Colors.grey[900],
-        title: const Text(
-          "The Wall",
-          style: TextStyle(
-            color: Colors.white,
+        backgroundColor: Colors.grey[500],
+        title: const Center(
+          child: Text(
+            "The Wall",
+            style: TextStyle(
+              color: Colors.black,
+            ),
           ),
         ),
-        actions: [IconButton(onPressed: signOut, icon: Icon(Icons.logout))],
+      ),
+      drawer: MyDrawer(
+        onProfileTap: goToProfilePage,
+        onSignOut: signOut,
       ),
       body: Center(
         child: Column(children: [
