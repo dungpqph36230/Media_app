@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "709650562150",
+    "project_id": "walltulorial",
+    "storage_bucket": "walltulorial.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709650562150:android:448d99519b9473616041a7",
+        "android_client_info": {
+          "package_name": "com.example.firebase_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHp0qaZMauvHKzoN2C_WJD3YmU-CtzvdQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
