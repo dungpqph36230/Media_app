@@ -28,7 +28,7 @@ class _ProfilePageState extends State<ProfilePage> {
           autofocus: true,
           style: TextStyle(color: Colors.white),
           decoration: InputDecoration(
-            hintText: "Enter ner $field",
+            hintText: "Enter new $field",
             hintStyle: TextStyle(color: Colors.grey),
           ),
           onChanged: (value) {
@@ -104,8 +104,8 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
                   MyTextBox(
                     text: userData['username'],
-                    sectionName: 'Dung',
-                    onPressed: () => editField('Dung'),
+                    sectionName: 'username',
+                    onPressed: () => editField('username'),
                   ),
                   MyTextBox(
                     text: userData['bio'],
